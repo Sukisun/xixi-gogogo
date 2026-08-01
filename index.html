@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="西西gogogo">
+<meta name="theme-color" content="#d3c4b3">
+<meta name="description" content="西西gogogo - 每日学习成长工作台">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon.png">
+<title>西西gogogo</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="phone-frame">
+  <div class="app theme-english" id="app">
+    <!-- 状态栏 -->
+    <div class="status-bar">
+      <span class="status-time" id="clock">--:--</span>
+      <div class="status-icons">
+        <span class="ic-signal">▮▮▮▯</span>
+        <span class="ic-battery" id="battery">--%</span>
+      </div>
+    </div>
+
+    <!-- 主体 -->
+    <div class="main">
+      <!-- 侧栏 -->
+      <div class="sidebar" id="sidebar">
+        <div class="menu-item active" data-tab="english"><span class="menu-icon">🔤</span><span class="menu-text">英语学习</span></div>
+        <div class="menu-item" data-tab="blog"><span class="menu-icon">✍️</span><span class="menu-text">博客精选</span></div>
+        <div class="menu-item" data-tab="express"><span class="menu-icon">🎤</span><span class="menu-text">表达能力</span></div>
+        <div class="menu-item" data-tab="books"><span class="menu-icon">📚</span><span class="menu-text">读书推荐</span></div>
+        <div class="menu-item" data-tab="ai"><span class="menu-icon">🤖</span><span class="menu-text">AI学习</span></div>
+        <div class="menu-item" data-tab="news"><span class="menu-icon">📺</span><span class="menu-text">新闻资讯</span></div>
+        <div class="menu-item" data-tab="finance"><span class="menu-icon">💰</span><span class="menu-text">学理财</span></div>
+        <div class="menu-item" data-tab="douyin"><span class="menu-icon">🎵</span><span class="menu-text">抖音榜</span></div>
+        <div class="menu-item" data-tab="beauty"><span class="menu-icon">💄</span><span class="menu-text">医美销售</span></div>
+        <div class="menu-item" data-tab="history"><span class="menu-icon">📜</span><span class="menu-text">学历史</span></div>
+      </div>
+
+      <!-- 右侧内容 -->
+      <div class="content" id="content">
+        <div class="content-header">
+          <div>
+            <div class="date-main" id="dateMain">--月--日</div>
+            <div class="date-sub" id="dateSub">--</div>
+          </div>
+          <div class="search-btn" id="searchBtn">🔍</div>
+        </div>
+        <div id="panels"></div>
+      </div>
+    </div>
+
+    <!-- 悬浮 + -->
+    <div class="fab" id="fab">+</div>
+  </div>
+</div>
+
+<!-- 搜索弹层 -->
+<div class="search-overlay" id="searchOverlay" style="display:none">
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="搜索待办内容…" />
+    <div id="searchResults" class="search-results"></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
