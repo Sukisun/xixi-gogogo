@@ -392,6 +392,54 @@ body {
 }
 .book-desc { font-size: 13px; color: #555; line-height: 1.5; }
 
+/* ====== 学习内容卡片（可展开） ====== */
+.lesson-card {
+  background: #fdfbf7;
+  border-radius: 16px;
+  padding: 0 16px;
+  margin-bottom: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.04);
+  border-left: 3px solid var(--theme-accent);
+  overflow: hidden;
+}
+.lesson-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  cursor: pointer;
+}
+.lesson-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a1a;
+  flex: 1;
+  line-height: 1.4;
+}
+.lesson-arrow {
+  font-size: 14px;
+  color: #b8a78f;
+  transition: transform 0.3s;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+.lesson-card.expanded .lesson-arrow {
+  transform: rotate(180deg);
+}
+.lesson-body {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.7;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding-bottom: 0;
+}
+.lesson-card.expanded .lesson-body {
+  max-height: 800px;
+  padding-bottom: 14px;
+}
+
 /* ====== 加载状态 ====== */
 .loading-dot { text-align: center; color: #b8a78f; font-size: 13px; padding: 16px 0; }
 .loading-dot::before {

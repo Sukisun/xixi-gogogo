@@ -12,7 +12,7 @@ const Store = {
   }
 };
 
-// ========== 主题配色（9大模块多巴胺色）==========
+// ========== 主题配色（10大模块多巴胺色）==========
 const THEMES = {
   english:  { bg1:'#c8e0f5', bg2:'#91c0e8', accent:'#3a7bd5', soft:'#a8c8f0', text:'#122a4a' },
   blog:     { bg1:'#d4f0e8', bg2:'#7ecdc0', accent:'#2db8a3', soft:'#a8e4d8', text:'#0a3a30' },
@@ -44,6 +44,12 @@ const MODULES = {
       { en:'Better late than never.', cn:'迟做总比不做好。', note:'安慰迟到' },
       { en:"Where there's a will, there's a way.", cn:'有志者事竟成。', note:'励志表达' },
     ],
+    // 学习内容：语法小课堂
+    lessons: [
+      { title:'📍 一般现在时 vs 现在进行时', content:'一般现在时表示习惯性动作：I drink coffee every morning.（我每天早上喝咖啡）\n现在进行时表示此刻正在发生：I am drinking coffee now.（我现在正在喝咖啡）\n记忆口诀：经常用一般，正在用进行。' },
+      { title:'📍 可数 vs 不可数名词', content:'可数名词有复数形式：apple→apples, book→books\n不可数名词没有复数：water, money, information, advice\n注意：information 和 advice 是不可数名词，不能加s！正确：a piece of advice（一条建议）' },
+      { title:'📍 常用口语短句 10 句', content:"1. How's it going? 最近怎么样？\n2. I'm just looking. 我只是随便看看（逛街）\n3. It's on me. 这次我请客。\n4. Take your time. 慢慢来。\n5. No worries. 没关系/别担心。\n6. That makes sense. 有道理。\n7. I'll take it. 我买了/我要了。\n8. Just in case. 以防万一。\n9. It depends. 看情况。\n10. Sounds good! 听起来不错！" },
+    ],
   },
   // 2. 博客精选
   blog: {
@@ -57,6 +63,11 @@ const MODULES = {
       { title:'我用了 3 年才明白的复利思维', author:'孤独大脑', cat:'思维模型', time:'15分钟', desc:'阅读、写作、人脉、健康都是复利游戏。关键是持续小步。' },
       { title:'一个人的商业模式：把自己当公司经营', author:'商业人物', cat:'商业认知', time:'11分钟', desc:'你的时间就是产品，你的能力就是护城河。' },
       { title:'如何高效阅读：三遍阅读法', author:'书单来了', cat:'阅读方法', time:'7分钟', desc:'快翻→精读笔记→输出总结。读完不是终点，用上才是。' },
+    ],
+    // 学习内容：写作技巧
+    lessons: [
+      { title:'✍️ 金字塔写作法', content:'结论先行：文章第一句话就告诉读者核心观点。\n然后逐层展开：支撑论点1 → 论点2 → 论点3。\n最后总结呼应。读者最关心"所以呢"，先回答这个问题。\n\n示例：\n❌ 我昨天去了趟超市，买了菜，遇到老王，聊了会天，发现他跳槽了…\n✅ 老王跳槽了！昨天在超市碰到他，他说去了新公司，工资涨了30%。' },
+      { title:'✍️ 让文章好读的 5 个技巧', content:'1. 短句优先：一句话不超过25字，读者不累。\n2. 多用具体数字：不说"很多人"，说"1000万人"。\n3. 多举例子：抽象概念用故事解释。\n4. 小标题分段：每300字一个小标题。\n5. 开头抓人：用问题、反常识或故事开头。' },
     ],
   },
   // 3. 表达能力
@@ -77,6 +88,12 @@ const MODULES = {
       { name:'镜头表现力', desc:'眼神、手势、语速节奏的刻意练习' },
     ],
     pathColor: '',
+    // 学习内容：表达实战话术
+    lessons: [
+      { title:'🎤 PREP 即兴发言公式', content:'P - Point（观点）：先说你的结论\nR - Reason（理由）：为什么这么说\nE - Example（例子）：举个具体例子\nP - Point（重申）：再次强调观点\n\n示例：\n【观点】我认为远程办公会越来越普及。\n【理由】因为它降低了企业成本，也提高了员工幸福感。\n【例子】我朋友公司实行远程后，离职率从20%降到了5%。\n【重申】所以远程办公是未来趋势。' },
+      { title:'🎤 高情商拒绝话术', content:'1. 缓冲法：这个我得看看日程，晚点答复你。\n2. 替代法：这事我帮不上，但我知道谁可以——推荐小王。\n3. 条件法：可以，但需要再给我三天时间。\n4. 共情法：我理解你的急迫，但我现在手头有更紧急的事。\n5. 直接法（少用）：谢谢想到我，但我这次确实没法参与。\n\n核心：拒绝事情，不拒绝人。' },
+      { title:'🎤 自我介绍万能模板', content:'30秒版：\n"你好，我是XXX，目前在XX公司做XX岗位，主要负责XX。之前在XX领域有X年经验，擅长XX和XX。很高兴认识你！"\n\n关键三要素：\n1. 我是谁（身份标签）\n2. 我做过什么（实力背书）\n3. 我能提供什么价值（让对方记住你的理由）' },
+    ],
   },
   // 4. 读书推荐
   books: {
@@ -93,6 +110,11 @@ const MODULES = {
       { title:'《身体由我》', author:'恩德斯', cat:'健康科普', rating:'⭐ 8.3', desc:'了解自己的身体是爱自己的开始。' },
       { title:'《悉达多》', author:'黑塞', cat:'文学小说', rating:'⭐ 9.0', desc:'30 岁重读，读出完全不同的味道。' },
     ],
+    // 学习内容：阅读方法论
+    lessons: [
+      { title:'📖 三遍阅读法', content:'第一遍：快速翻阅（10分钟）\n看目录、序言、每章开头结尾。建立整体框架，判断是否值得精读。\n\n第二遍：精读+笔记（1-2小时）\n逐章阅读，用笔标记关键句。每章读完写一句话总结。折页或贴标签标记重要段落。\n\n第三遍：输出回顾（30分钟）\n合上书，用自己的话写读书笔记。找出3个可以应用到生活中的点。一周后翻看笔记巩固。' },
+      { title:'📖 如何选到好书', content:'1. 看豆瓣评分：8.0以上基本不会踩雷。\n2. 看版次和印次：重印多次=经受住了时间考验。\n3. 看出版社：中信、广西师大、三联的书品质较高。\n4. 看作者背景：是领域专家还是蹭热度的？\n5. 看参考文献：好书一定有扎实的引用来源。\n6. 逛实体店翻一翻：手感、排版、文笔是否对味。' },
+    ],
   },
   // 5. AI 学习
   ai: {
@@ -108,6 +130,12 @@ const MODULES = {
       { name:'AI 应用实战', desc:'Agent / RAG / AI 绘画 / AI 编程' },
     ],
     pathColor: 'purple',
+    // 学习内容：AI 实用教程
+    lessons: [
+      { title:'🤖 Prompt 万能公式', content:'角色 + 任务 + 背景 + 格式 + 示例\n\n❌ 差的提示词：帮我写个文案\n✅ 好的提示词：\n【角色】你是一个有10年经验的新媒体文案专家\n【任务】为一款粉色保温杯写小红书种草文案\n【背景】目标用户是25-35岁女性，卖点：高颜值、保温12小时、轻便\n【格式】标题+正文，300字以内，3个emoji\n【示例】参考小红书爆款"今天也要好好喝水"风格\n\n技巧：越具体，AI 回答越好。' },
+      { title:'🤖 5 个 AI 工具推荐', content:'1. ChatGPT/Claude：万能助手，写文案、分析、编程\n2. DeepSeek：国产免费，中文能力强\n3. Midjourney/Nano Banana：AI 绘画，输入文字生成图片\n4. Gamma：AI 一键生成 PPT\n5. Kimi：长文档总结，上传PDF自动分析\n\n使用场景：\n• 写周报 → 让AI帮你列框架\n• 做PPT → Gamma 30秒出初稿\n• 读书 → Kimi 总结核心观点\n• 配图 → AI绘画生成素材' },
+      { title:'🤖 AI 术语速查', content:'Token：AI处理文本的最小单位，1个汉字≈1-2个token\n上下文窗口：AI一次能记住的内容长度，GPT-4支持12万字\n幻觉：AI一本正经说假话，重要信息务必核实\nFine-tuning：用自定义数据训练模型，让它更专业\nRAG：检索增强生成，让AI基于你的文档回答\nAgent：AI智能体，能自主规划和执行多步任务\nMCP：模型上下文协议，让AI连接外部工具和数据' },
+    ],
   },
   // 6. 新闻资讯
   news: {
@@ -139,6 +167,13 @@ const MODULES = {
       { name:'进阶工具', desc:'夏普比率、最大回撤、基金筛选' },
     ],
     pathColor: '',
+    // 学习内容：理财知识详解
+    lessons: [
+      { title:'💰 通货膨胀：钱为什么越来越不值钱', content:'通货膨胀 = 物价持续上涨，钱购买力下降。\n\n例子：10年前一碗面5元，现在15元。面没变，但钱贬值了。\n\n衡量指标：CPI（居民消费价格指数）\n• CPI > 3%：通胀明显，钱缩水快\n• CPI 2%左右：正常水平，经济健康增长\n\n应对方法：\n1. 不要把所有钱放活期（利息跑不赢通胀）\n2. 学会投资：基金、债券、股票\n3. 买抗通胀资产：黄金、房产、优质股票\n4. 投资自己：技能提升=收入提升，最抗通胀' },
+      { title:'💰 基金定投：最适合新手的投资方式', content:'定投 = 每月固定时间、固定金额买入同一只基金。\n\n为什么有效？\n• 摊平成本：贵的时候少买点，便宜的时候多买点\n• 克服人性：不用择时，不追涨杀跌\n• 复利效应：长期坚持，收益可观\n\n操作步骤：\n1. 选指数基金（如沪深300、中证500）\n2. 设定每月发工资后第二天自动扣款\n3. 金额：月收入的10%-20%\n4. 坚持3-5年，不要中途停止\n5. 达到目标收益（如20%）再分批赎回\n\n注意：定投亏钱是正常的！下跌是积攒便宜筹码的机会。' },
+      { title:'💰 看懂股票基础：PE 和 PB', content:'PE（市盈率）= 股价 ÷ 每股收益\n含义：你花多少年能赚回投资。\n• PE 10倍：10年回本，估值较低\n• PE 50倍：50年回本，估值较高\n• 但成长股PE高也正常，关键看增速\n\nPB（市净率）= 股价 ÷ 每股净资产\n含义：你买入的价格是公司净资产的几倍。\n• PB < 1：破净，股价低于账面价值\n• 银行股常破净，不代表一定划算\n\n口诀：PE看盈利能力，PB看资产价值。两者要结合行业看，不能孤立判断。' },
+      { title:'💰 资产配置：不要把鸡蛋放一个篮子', content:'标准普尔家庭资产象限图：\n\n1. 日常开销（10%）：活期/余额宝，3-6个月生活费\n2. 保命钱（20%）：意外险+重疾险，应对突发大事\n3. 生钱的钱（30%）：股票/基金，高风险高收益\n4. 保本钱（40%）：债券/定期/年金，长期稳健\n\n核心原则：\n• 收益和风险成正比\n• 分散投资降低风险\n• 用闲钱投资，不要借钱炒股\n• 先保障后投资（先买保险再理财）' },
+    ],
   },
   // 8. 抖音飙升榜
   douyin: {
@@ -160,6 +195,11 @@ const MODULES = {
       { rank:7, title:'每天一个变美小习惯', hot:'356万', tag:'美妆' },
       { rank:8, title:'这首歌怎么这么好听', hot:'298万', tag:'音乐' },
     ],
+    // 学习内容：抖音运营技巧
+    lessons: [
+      { title:'🔥 爆款视频 3 秒法则', content:'前3秒决定用户划走还是看完。\n\n黄金开头模板：\n1. 悬念式："你绝对想不到…" / "99%的人不知道"\n2. 冲突式："月薪3000 vs 月薪3万的生活"\n3. 反常识："别再每天喝8杯水了！"\n4. 痛点式："总是存不下钱？因为你犯了这3个错"\n5. 数字式："3个动作，告别颈椎病"\n\n关键：前3秒必须给出"为什么要看下去"的理由。' },
+      { title:'🔥 抖音选题方法论', content:'好选题 = 痛点 + 情绪 + 价值\n\n5大爆款选题方向：\n1. 教程类："30秒学会XX" → 提供实用价值\n2. 对比类："月薪3千vs3万" → 制造反差冲突\n3. 挑战类："7天打卡XX" → 引发参与感\n4. 情感类："写给30岁的自己" → 引发共鸣\n5. 盘点类："2024最值得买的10样" → 满足好奇\n\n选题自检：用户看完能学到什么/感受到什么/转发给谁？三个问题都有答案就是好选题。' },
+    ],
   },
   // 9. 医美知识及销售技巧
   beauty: {
@@ -171,6 +211,13 @@ const MODULES = {
       { title:'练习 SPIN 提问法话术 3 组', time:'销售技巧' },
     ],
     done: [ { title:'热玛吉 vs 超声炮对比笔记', time:'08:30' } ],
+    // 学习内容：医美知识 + 销售话术
+    lessons: [
+      { title:'💉 注射类：玻尿酸知识体系', content:'按分子量分三类：\n\n1. 大分子（交联度高）\n• 特点：硬度高、维持久（12-18个月）\n• 适用：隆鼻、垫下巴、丰太阳穴\n• 品牌：乔雅登极致、瑞蓝丽瑅\n\n2. 中分子\n• 特点：软硬适中、塑形+填充\n• 适用：苹果肌、法令纹、唇珠\n• 品牌：乔雅登雅致、瑞蓝2号\n\n3. 小分子（非交联/低交联）\n• 特点：柔软、适合浅层细纹\n• 适用：泪沟、颈纹、手背\n• 品牌：嗨体、瑞蓝唯瑅\n\n记忆口诀：大塑形、中填充、小细纹。' },
+      { title:'💡 光电抗衰三件套对比', content:'1. 热玛吉（射频类）\n• 原理：射频加热真皮层，刺激胶原蛋白再生\n• 优势：全脸紧致、无创无恢复期\n• 适合：面部松弛、轮廓模糊\n• 价格：1-3万/次，维持1-2年\n\n2. 超声炮（超声类）\n• 原理：聚焦超声作用于SMAS筋膜层\n• 优势：深层提拉、可精准定位\n• 适合：下颌线松垂、双下巴\n• 价格：1-2万/次\n\n3. Fotona 4D（激光类）\n• 原理：多波长激光，从口内到口外分层治疗\n• 优势：改善肤色+紧致，口内治疗提升明显\n• 适合：法令纹深、肤色暗沉\n• 价格：0.5-1.5万/次\n\n销售要点：根据客户主要诉求推荐，不是越贵越好。' },
+      { title:'💼 SPIN 销售提问法', content:'S - Situation（现状）\n"您目前有在做哪些皮肤管理吗？"\n"您之前了解过哪些医美项目？"\n\nP - Problem（问题/痛点）\n"您觉得脸上最困扰您的是什么？"\n"法令纹/松弛是什么时候开始注意到的？"\n\nI - Implication（影响）\n"这个问题对您日常生活/拍照有影响吗？"\n"如果不处理，您觉得会越来越明显吗？"\n\nN - Need-payoff（需求-回报）\n"如果有个方案能改善法令纹，您会感兴趣吗？"\n"做完后看起来年轻3-5岁，对您意味着什么？"\n\n核心：让客户自己说出需求，而不是你推销。问 > 说。' },
+      { title:'💼 常见客户异议处理话术', content:'异议1："太贵了"\n话术："理解您的感受。我们可以拆开看——这个项目维持18个月，每天不到XX元，比一杯咖啡还便宜。而且效果是持续的，不像护肤品用完就没了。"\n\n异议2："我怕有副作用"\n话术："这个担心很正常。我们医生有X年经验，做过XXX例。而且这个产品有NMPA认证，我会给您看资质。我们先做皮测，确保安全再开始。"\n\n异议3："我考虑考虑"\n话术："好的，不着急。您主要考虑哪方面呢？是价格、效果还是安全性？我针对性给您解答，帮您做参考。"（找到真实顾虑再解决）\n\n核心：先认同情绪，再提供信息，最后给台阶。' },
+    ],
   },
   // 10. 学历史
   history: {
@@ -190,6 +237,13 @@ const MODULES = {
       { name:'历史启示', desc:'历史不会重复，但会押韵——给当下的启发' },
     ],
     pathColor: 'red',
+    live: 'gov',
+    // 学习内容：历史故事
+    lessons: [
+      { title:'📜 朝代记忆口诀', content:'三皇五帝夏商周，\n春秋战国乱悠悠。\n秦汉三国二晋收，\n南北朝并隋唐继。\n五代十国宋元明，\n清帝退位民国兴。\n中华人民共和国立，\n五千余年传到今。\n\n记忆技巧：\n• 夏商周：最早三个朝代，周最长（800年）\n• 秦：第一个大一统帝国（公元前221年）\n• 汉：分为西汉、东汉，中间夹着王莽新朝\n• 唐：最繁荣的朝代，贞观之治+开元盛世\n• 宋：经济文化巅峰，但军事弱\n• 元：蒙古帝国，疆域最大\n• 明：朱元璋草根逆袭\n• 清：最后一个王朝，1912年灭亡' },
+      { title:'📜 改变中国历史的 5 场战争', content:'1. 长平之战（公元前260年）\n秦 vs 赵，白起坑杀40万赵军。秦国统一再无对手，六国注定灭亡。\n\n2. 赤壁之战（公元208年）\n孙刘联军火烧曹操舰队。三国鼎立格局形成，中国分裂了70年。\n\n3. 淝水之战（公元383年）\n东晋8万兵 vs 前秦80万兵。以少胜多，保住了南方汉文化，南北朝对峙开始。\n\n4. 鸦片战争（1840年）\n英国坚船利炮打开中国大门。中国从天朝上国沦为半殖民地，近代史开端。\n\n5. 抗日战争（1937-1945）\n中华民族最危险的8年。最终胜利，中国成为联合国五常，国际地位重塑。\n\n启示：战争改变的不只是疆域，更是文明的走向。' },
+      { title:'📜 历史上的女性力量', content:'1. 武则天（624-705）\n中国唯一女皇帝。从才人到皇后到皇帝，67岁称帝改国号为周。能力极强，科举选材、发展经济。\n\n2. 孝庄太后（1613-1688）\n辅佐顺治、康熙两代皇帝。稳住清初局面，培养出康熙大帝。\n\n3. 李清照（1084-1155）\n千古第一才女。"寻寻觅觅，冷冷清清，凄凄惨惨戚戚"——宋词婉约派巅峰。\n\n4. 花木兰（南北朝）\n替父从军12年。"万里赴戎机，关山度若飞"——巾帼英雄代名词。\n\n5. 慈禧（1835-1908）\n实际统治中国近半个世纪。权谋手段一流，但误国误民，争议极大。\n\n启示：历史不只是男人的故事，女性同样在塑造历史。' },
+    ],
   },
 };
 
@@ -211,6 +265,8 @@ Store.set('todos', todoState);
 const $ = sel => document.querySelector(sel);
 const $$ = sel => document.querySelectorAll(sel);
 const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+// 将 \n 转换为 <br>，保留文本安全
+const fmtContent = s => esc(s).replace(/\n/g, '<br>');
 
 // ========== 时钟 ==========
 function updateClock() {
@@ -267,6 +323,30 @@ function renderPanel(tab) {
     html += `</div>`;
   }
 
+  // 实时新闻列表
+  if (m.live) {
+    html += `<div class="todo-card">
+      <div class="card-head">
+        <div class="card-title"><span class="card-ic">${m.icon}</span>${m.title} · 实时</div>
+        <span class="refresh-btn" onclick="loadLive('${m.live}',true)">↻ 刷新</span>
+      </div>
+      <div id="live_${m.live}"><div class="loading-dot">加载中…</div></div>
+    </div>`;
+  }
+
+  // 学习内容卡片（知识点详解）
+  if (m.lessons) {
+    m.lessons.forEach((lesson, i) => {
+      html += `<div class="lesson-card" onclick="toggleLesson(this)">
+        <div class="lesson-head">
+          <div class="lesson-title">${esc(lesson.title)}</div>
+          <span class="lesson-arrow">▾</span>
+        </div>
+        <div class="lesson-body">${fmtContent(lesson.content)}</div>
+      </div>`;
+    });
+  }
+
   // 今日待办
   const todos = todoState[tab] || [];
   if (todos.length || m.todos) {
@@ -300,17 +380,6 @@ function renderPanel(tab) {
     html += `<div class="next-card">
       <div class="card-head"><div class="card-title"><span class="card-ic">🗓</span>明日预备 (${ts})</div></div>
       <div class="empty-text">暂无预备事项</div>
-    </div>`;
-  }
-
-  // 实时新闻列表
-  if (m.live) {
-    html += `<div class="todo-card">
-      <div class="card-head">
-        <div class="card-title"><span class="card-ic">${m.icon}</span>${m.title} · 实时</div>
-        <span class="refresh-btn" onclick="loadLive('${m.live}',true)">↻ 刷新</span>
-      </div>
-      <div id="live_${m.live}"><div class="loading-dot">加载中…</div></div>
     </div>`;
   }
 
@@ -394,6 +463,11 @@ function renderPanel(tab) {
   }
 
   return html;
+}
+
+// 展开/收起学习内容
+function toggleLesson(el) {
+  el.classList.toggle('expanded');
 }
 
 function renderTodoItems(tab) {
@@ -706,7 +780,7 @@ function initPullRefresh() {
 function initPWA() {
   if ('serviceWorker' in navigator) {
     const swCode = `
-      const CACHE = 'xixi-gogogo-v1';
+      const CACHE = 'xixi-gogogo-v2';
       self.addEventListener('install', e => { self.skipWaiting(); });
       self.addEventListener('activate', e => { e.waitUntil(clients.claim()); });
       self.addEventListener('fetch', e => {
